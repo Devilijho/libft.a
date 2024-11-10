@@ -6,7 +6,7 @@
 /*   By: safuente <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 18:36:13 by safuente          #+#    #+#             */
-/*   Updated: 2024/11/10 11:14:33 by safuente         ###   ########.fr       */
+/*   Updated: 2024/11/10 11:55:48 by safuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,10 @@ int	main(int ac, char **av)
 	printf("ft_isalnum\n");
 	printf("og->%i\n",isalnum(c));
 	printf("mio->%i\n",ft_isalnum(c));
+	printf("ft_isascii\n");
+	printf("og->%i\n",isascii(c));
+	printf("mio->%i\n",ft_isascii(c));
+	printf("ft_isprint\n");
+	printf("og->%i\n",isprint(c));
+	printf("mio->%i\n",ft_isprint(c));
 }
