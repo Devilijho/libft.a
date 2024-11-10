@@ -6,7 +6,7 @@
 /*   By: safuente <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 18:36:13 by safuente          #+#    #+#             */
-/*   Updated: 2024/11/10 17:55:57 by safuente         ###   ########.fr       */
+/*   Updated: 2024/11/10 18:31:58 by safuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@
 int	main(int ac, char **av)
 {
 	char	c;
-	char	*s;
+	//char	*s;
+	char	*str;
 	/*char	str1[8];
 	char	str2[8];
 	char	dest1[10] = "hola";	
@@ -31,7 +32,8 @@ int	main(int ac, char **av)
 
 	(void)ac;
 	c = av[1][0];
-	s = av[1];
+	//s = av[1];
+	str = av[2];
 	/*printf("c->%i\n", c);
 	printf("ft_isalpha\n");
 	printf("og ->%i\n", isalpha(c));
@@ -79,11 +81,14 @@ int	main(int ac, char **av)
 	printf("og ->%s\n", dest2);
 	printf("mio->%s\n", dest1);
 	printf("og ->%i\n", l2);
-	printf("mio->%i\n", l1);*/
+	printf("mio->%i\n", l1);
 	printf("ft_toupper\n");
 	printf("og ->%i\n", toupper(c));
 	printf("mio->%i\n", ft_toupper(c));
 	printf("ft_tolower\n");
 	printf("og ->%i\n", tolower(c));
-	printf("mio->%i\n", ft_tolower(c));
+	printf("mio->%i\n", ft_tolower(c));*/
+	printf("ft_strchr\n");
+	printf("og ->%s\n", strchr(str, c));
+	printf("mio->%s\n", ft_strchr(str, c));	
 }
