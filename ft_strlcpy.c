@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: safuente <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 18:39:24 by safuente          #+#    #+#             */
-/*   Updated: 2024/11/10 15:42:08 by safuente         ###   ########.fr       */
+/*   Created: 2024/11/10 15:27:45 by safuente          #+#    #+#             */
+/*   Updated: 2024/11/10 16:38:53 by safuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stddef.h>
+#include "libft.h"
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-size_t	ft_strlen(const char *c);
-void	*ft_memset(void *s, int c, size_t n);
-void	ft_bzero(void *s, size_t n);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-size_t	ft_strlcpy(char *dst, const char *src, size_t siz);
+size_t	ft_strlcpy(char *dst, const char *src, size_t siz)
+{
+	size_t	i;
 
-#endif
+	i = 0;
+	if (siz == 0)
+		return (ft_strlen(src));
+	while (i < siz - 1 && src[i] != '\0')
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	if (siz > 0)
+		dst[i++] = '\0';
+	return (ft_strlen(src));
+}

@@ -6,7 +6,7 @@
 #    By: safuente <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/10 11:23:14 by safuente          #+#    #+#              #
-#    Updated: 2024/11/10 11:27:30 by safuente         ###   ########.fr        #
+#    Updated: 2024/11/10 15:49:07 by safuente         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRC	=	*.c
 all	=	${NAME}
 
 ${NAME}:
-	${CC} ${CFLAGS} -o ${NAME} ${SRC}
+	${CC} ${CFLAGS} -o ${NAME} ${SRC} -lbsd
 
 clean:
 	rm -f *o

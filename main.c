@@ -6,12 +6,12 @@
 /*   By: safuente <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 18:36:13 by safuente          #+#    #+#             */
-/*   Updated: 2024/11/10 15:22:27 by safuente         ###   ########.fr       */
+/*   Updated: 2024/11/10 16:26:16 by safuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
+#include <bsd/string.h>
 #include <strings.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -22,10 +22,12 @@ int	main(int ac, char **av)
 {
 	char	c;
 	char	*s;
-	char	str1[20];
-	char	str2[20];
-	char	src[10] = "hola";
-	
+	char	str1[8];
+	char	str2[8];
+	//char	src[10] = "hola";	
+	int	l1;
+	int	l2;
+
 	(void)ac;
 	c = av[1][0];
 	s = av[1];
@@ -47,7 +49,7 @@ int	main(int ac, char **av)
 	printf("mio->%i\n", ft_isprint(c));
 	printf("ft_strlen\n");
 	printf("og ->%lu\n", strlen(s));
-	printf("mio->%zu\n", ft_strlen(s));*/
+	printf("mio->%zu\n", ft_strlen(s));
 	printf("ft_memset\n");
 	memset(str2, c, atoi(&av[2][0]));
 	ft_memset(str1, c, atoi(&av[2][0]));
@@ -62,5 +64,12 @@ int	main(int ac, char **av)
 	bzero(str2, atoi(&av[2][0]));
 	ft_bzero(str1, atoi(&av[2][0]));
 	printf("og ->%s\n", str2);
+	printf("mio->%s\n", str1);*/
+	printf("ft_strlcpy\n");
+	l2 = strlcpy(str2, av[1], atoi(&av[2][0]));
+	l1 = ft_strlcpy(str1, av[1], atoi(&av[2][0]));
+	printf("og ->%s\n", str2);
 	printf("mio->%s\n", str1);
+	printf("og ->%i\n", l2);
+	printf("mio->%i\n", l1);	
 }
