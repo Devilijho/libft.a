@@ -6,11 +6,13 @@
 /*   By: safuente <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 18:36:13 by safuente          #+#    #+#             */
-/*   Updated: 2024/11/10 11:55:48 by safuente         ###   ########.fr       */
+/*   Updated: 2024/11/10 15:22:27 by safuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
+#include <strings.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <ctype.h>
@@ -18,23 +20,47 @@
 
 int	main(int ac, char **av)
 {
+	char	c;
+	char	*s;
+	char	str1[20];
+	char	str2[20];
+	char	src[10] = "hola";
+	
 	(void)ac;
-	char c;
 	c = av[1][0];
-	printf("c->%i\n",c);
+	s = av[1];
+	/*printf("c->%i\n", c);
 	printf("ft_isalpha\n");
-	printf("og->%i\n",isalpha(c));
-	printf("mio->%i\n",ft_isalpha(c));
+	printf("og ->%i\n", isalpha(c));
+	printf("mio->%i\n", ft_isalpha(c));
 	printf("ft_isdigit\n");
-	printf("og->%i\n",isdigit(c));
-	printf("mio->%i\n",ft_isdigit(c));
+	printf("og ->%i\n", isdigit(c));
+	printf("mio->%i\n", ft_isdigit(c));
 	printf("ft_isalnum\n");
-	printf("og->%i\n",isalnum(c));
-	printf("mio->%i\n",ft_isalnum(c));
+	printf("og ->%i\n", isalnum(c));
+	printf("mio->%i\n", ft_isalnum(c));
 	printf("ft_isascii\n");
-	printf("og->%i\n",isascii(c));
-	printf("mio->%i\n",ft_isascii(c));
+	printf("og ->%i\n", isascii(c));
+	printf("mio->%i\n", ft_isascii(c));
 	printf("ft_isprint\n");
-	printf("og->%i\n",isprint(c));
-	printf("mio->%i\n",ft_isprint(c));
+	printf("og ->%i\n", isprint(c));
+	printf("mio->%i\n", ft_isprint(c));
+	printf("ft_strlen\n");
+	printf("og ->%lu\n", strlen(s));
+	printf("mio->%zu\n", ft_strlen(s));*/
+	printf("ft_memset\n");
+	memset(str2, c, atoi(&av[2][0]));
+	ft_memset(str1, c, atoi(&av[2][0]));
+	printf("og ->%s\n", str2);
+	printf("mio->%s\n", str1);
+	printf("ft_memcpy\n");
+	memcpy(str2, src, atoi(&av[2][0]));
+	ft_memcpy(str1, src, atoi(&av[2][0]));
+	printf("og ->%s\n", str2);
+	printf("mio->%s\n", str1);
+	printf("ft_bzero\n");
+	bzero(str2, atoi(&av[2][0]));
+	ft_bzero(str1, atoi(&av[2][0]));
+	printf("og ->%s\n", str2);
+	printf("mio->%s\n", str1);
 }
