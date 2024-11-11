@@ -6,7 +6,7 @@
 /*   By: safuente <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 18:36:13 by safuente          #+#    #+#             */
-/*   Updated: 2024/11/11 15:32:20 by safuente         ###   ########.fr       */
+/*   Updated: 2024/11/11 17:05:49 by safuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,4 +113,7 @@ int	main(int ac, char **av)
 	printf("ft_memcmp\n");
 	printf("og->%i\n",memcmp(s, av[2], atoi(&av[3][0])));
 	printf("mio->%i\n",ft_memcmp(s, av[2], atoi(&av[3][0])));*/
+	printf("ft_strnstr\n");
+	printf("og->%s\n",strnstr(s, av[2], atoi(&av[3][0])));
+	printf("mio->%s\n",ft_strnstr(s, av[2], atoi(&av[3][0])));
 }

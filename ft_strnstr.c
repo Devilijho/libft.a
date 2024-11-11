@@ -1,27 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: safuente <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 14:52:55 by safuente          #+#    #+#             */
-/*   Updated: 2024/11/11 18:18:15 by safuente         ###   ########.fr       */
+/*   Created: 2024/11/11 15:34:28 by safuente          #+#    #+#             */
+/*   Updated: 2024/11/11 18:17:43 by safuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t		i;
-	const char	*ptr1;
-	const char	*ptr2;
+	size_t	i;
+	size_t	y;
+	size_t	x;
 
-	ptr1 = s1;
-	ptr2 = s2;
 	i = 0;
-	while (i < n && (unsigned char)ptr1[i] == (unsigned char)ptr2[i])
-		i++;
-	return ((unsigned char)ptr1[i] - (unsigned char)ptr2[i]);
+	x = 0;
+	y = 0;
+	(void)len;
+	if (ft_strlen(little) == 0)
+		return ((char *)big);
+	while (big[y] && y < len)
+	{
+		i = 0;
+		x = y;
+		while (little[i] == big[x] && x < len)
+		{
+			if (i == ft_strlen(little) - 1)
+				return ((char *)big + y);
+			x++;
+			i++;
+		}
+		y++;
+	}
+	return (NULL);
 }
