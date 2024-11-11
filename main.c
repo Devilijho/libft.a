@@ -6,7 +6,7 @@
 /*   By: safuente <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 18:36:13 by safuente          #+#    #+#             */
-/*   Updated: 2024/11/11 14:49:27 by safuente         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:32:20 by safuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ int	main(int ac, char **av)
 	char	*str1 = "santiago";
 	char	*str2 = "santiago";
 	char	*ptr1;
-	char	*ptr2;*/
+	char	*ptr2;
 	char	dest1[30] = "hola";	
 	char	dest2[30] = "hola";
-	/*int	l1;
+	int	l1;
 	int	l2;*/
 	(void)ac;
 	//c = av[1][0];
@@ -109,5 +109,8 @@ int	main(int ac, char **av)
 	if (ptr1 != NULL)
 		printf("my function found the character\n");
 	else
-		printf("my function didnt found the character\n");*/
+		printf("my function didnt found the character\n");
+	printf("ft_memcmp\n");
+	printf("og->%i\n",memcmp(s, av[2], atoi(&av[3][0])));
+	printf("mio->%i\n",ft_memcmp(s, av[2], atoi(&av[3][0])));*/
 }
