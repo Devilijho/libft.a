@@ -6,7 +6,7 @@
 /*   By: safuente <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 18:36:13 by safuente          #+#    #+#             */
-/*   Updated: 2024/11/11 19:03:53 by safuente         ###   ########.fr       */
+/*   Updated: 2024/11/11 19:44:54 by safuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ int	main(int ac, char **av)
 	char	*s;
 	/*char	*str;
 	char	*str1 = "santiago";
-	char	*str2 = "santiago";
-	char	*ptr1;
-	char	*ptr2;
-	char	dest1[30] = "hola";	
+	char	*str2 = "santiago";*/
+	char	*ptr1 = NULL;
+	char	*ptr2 = NULL;
+	/*char	dest1[30] = "hola";	
 	char	dest2[30] = "hola";
 	int	l1;
 	int	l2;*/
@@ -118,5 +118,10 @@ int	main(int ac, char **av)
 	printf("mio->%s\n",ft_strnstr(s, av[2], atoi(&av[3][0])));
 	printf("ft_atoi\n");
 	printf("og->%d\n",atoi(s));
-	printf("mio->%d\n",ft_atoi(s));*/	
+	printf("mio->%d\n",ft_atoi(s));
+	printf("ft_calloc\n");
+	printf("og->%s\n",(char *)calloc(10, sizeof(char)));
+	printf("mio->%s\n",(char *)ft_calloc(10, sizeof(char)));
+	printf("og->%s\n",ptr2);
+	printf("mio->%s\n",ptr1);*/
 }
