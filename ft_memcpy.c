@@ -6,7 +6,7 @@
 /*   By: safuente <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 14:59:59 by safuente          #+#    #+#             */
-/*   Updated: 2024/11/10 15:20:06 by safuente         ###   ########.fr       */
+/*   Updated: 2024/11/11 13:52:20 by safuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		d[i] = s[i];
+		*d = *s;
+		d++;
+		s++;
 		i++;
 	}
 	return (dest);

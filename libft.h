@@ -6,7 +6,7 @@
 /*   By: safuente <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 18:39:24 by safuente          #+#    #+#             */
-/*   Updated: 2024/11/11 11:56:13 by safuente         ###   ########.fr       */
+/*   Updated: 2024/11/11 13:22:52 by safuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ size_t	ft_strlen(const char *c);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t siz);
 size_t	ft_strlcat(char *dst, const char *src, size_t siz);
 
