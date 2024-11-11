@@ -6,7 +6,7 @@
 /*   By: safuente <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 18:36:13 by safuente          #+#    #+#             */
-/*   Updated: 2024/11/11 18:39:11 by safuente         ###   ########.fr       */
+/*   Updated: 2024/11/11 19:03:53 by safuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int	main(int ac, char **av)
 	printf("og ->%s\n", str2);
 	printf("mio->%s\n", str1);
 	printf("og ->%i\n", l2);
-	printf("mio->%i\n", l1);	
+	printf("mio->%i\n", l1);
 	printf("ft_strlcat\n");
 	l2 = strlcat(dest2, av[1], atoi(&av[2][0]));
 	l1 = ft_strlcat(dest1, av[1], atoi(&av[2][0]));
@@ -115,8 +115,8 @@ int	main(int ac, char **av)
 	printf("mio->%i\n",ft_memcmp(s, av[2], atoi(&av[3][0])));
 	printf("ft_strnstr\n");
 	printf("og->%s\n",strnstr(s, av[2], atoi(&av[3][0])));
-	printf("mio->%s\n",ft_strnstr(s, av[2], atoi(&av[3][0])));*/
+	printf("mio->%s\n",ft_strnstr(s, av[2], atoi(&av[3][0])));
 	printf("ft_atoi\n");
 	printf("og->%d\n",atoi(s));
-	printf("mio->%d\n",ft_atoi(s));
+	printf("mio->%d\n",ft_atoi(s));*/	
 }
