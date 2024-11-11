@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: safuente <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/10 17:59:00 by safuente          #+#    #+#             */
-/*   Updated: 2024/11/11 11:13:48 by safuente         ###   ########.fr       */
+/*   Created: 2024/11/11 11:14:42 by safuente          #+#    #+#             */
+/*   Updated: 2024/11/11 11:49:10 by safuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strchr(const char *s, int c)
+#include <stdio.h>
+char	*ft_strrchr(const char *s, int c)
 {
-	while (*s)
+	int	l;
+
+	l = ft_strlen(s) - 1;
+	while (0 <= l)
 	{
-		if (*s == (char)c)
+		if (s[l] == (char)c)
 		{
+			s += l;
 			return ((char *)s);
 		}
-		s++;
+		l--;
 	}
 	if ((char)c == '\0')
 		return ((char *)s);
