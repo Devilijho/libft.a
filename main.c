@@ -6,7 +6,7 @@
 /*   By: safuente <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 18:36:13 by safuente          #+#    #+#             */
-/*   Updated: 2024/11/11 11:48:32 by safuente         ###   ########.fr       */
+/*   Updated: 2024/11/11 12:17:38 by safuente         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,19 @@
 
 int	main(int ac, char **av)
 {
-	char	c;
-	//char	*s;
-	//char	*str;
-	char	*str1 = "abecedrio";
+	//char	c;
+	char	*s;
+	char	*str;
+	/*char	*str1 = "abecedrio";
 	char	*str2 = "abecedrio";
-	/*char	dest1[10] = "hola";	
+	char	dest1[10] = "hola";	
 	char	dest2[10] = "hola";
 	int	l1;
 	int	l2;*/
-
 	(void)ac;
-	c = av[1][0];
-	//s = av[1];
-	//str = av[2];
+	//c = av[1][0];
+	s = av[1];
+	str = av[2];
 	/*printf("c->%i\n", c);
 	printf("ft_isalpha\n");
 	printf("og ->%i\n", isalpha(c));
@@ -90,8 +89,11 @@ int	main(int ac, char **av)
 	printf("mio->%i\n", ft_tolower(c));
 	printf("ft_strchr\n");
 	printf("og ->%s\n", strchr(str2, c));
-	printf("mio->%s\n", ft_strchr(str1, c));*/
+	printf("mio->%s\n", ft_strchr(str1, c));
 	printf("ft_strrchr\n");
 	printf("og ->%s\n", strrchr(str2, c));
-	printf("mio->%s\n", ft_strrchr(str1, c));	
+	printf("mio->%s\n", ft_strrchr(str1, c));*/
+	printf("ft_strncmp\n");
+	printf("og ->%i\n", strncmp(s, str, 4));
+	printf("mio->%i\n", ft_strncmp(s, str, 4));
 }
